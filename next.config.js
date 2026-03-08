@@ -3,10 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['localhost'],
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
-  output: 'export', // Enable static HTML export for One.com
-  trailingSlash: false, // Changed to false for proper file structure
+  trailingSlash: false,
 }
 
 module.exports = nextConfig
