@@ -19,6 +19,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [referenceNumber, setReferenceNumber] = useState('');
+  const [debugInfo, setDebugInfo] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,7 +33,10 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json().catch(() => ({}));
+      const txt = await response.text();
+      setDebugInfo(`${response.status}: ${txt.substring(0,300)}`);
+      let result: any = {};
+      try { result = JSON.parse(txt); } catch {}
 
       if (response.ok && result.success) {
         setSubmitStatus('success');
@@ -41,7 +45,8 @@ export default function ContactPage() {
       } else {
         setSubmitStatus('error');
       }
-    } catch (error) {
+    } catch (error: any) {
+      setDebugInfo(`FETCH ERROR: ${error.message}`);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -172,6 +177,11 @@ export default function ContactPage() {
                         <a href="mailto:admin@t21services.co.uk" className="text-[#D4AF37] underline">admin@t21services.co.uk</a>
                         {' '}or call <strong>+44 (0) 203 375 2061</strong>.
                       </p>
+                    </div>
+                  )}
+                  {debugInfo && (
+                    <div className="bg-blue-900/30 border border-blue-500/50 rounded-lg p-3">
+                      <p className="text-blue-300 text-xs font-mono break-all">{debugInfo}</p>
                     </div>
                   )}
 
