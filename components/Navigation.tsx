@@ -22,9 +22,8 @@ export default function Navigation() {
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Operational Delivery', href: '/operational-delivery' },
-    { name: 'NHS Trusts', href: '/nhs-trusts' },
+    { name: 'Mobilisation', href: '/programme-mobilisation' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Leadership', href: '/leadership' },
     { name: 'Governance', href: '/governance-compliance' },
     { name: 'Contact', href: '/contact' },
   ]
@@ -49,31 +48,19 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center gap-5">
-            <Link href="/" className={`text-sm text-white hover:text-[#D4AF37] transition-colors ${pathname === '/' ? 'text-[#D4AF37]' : ''}`}>
-              Home
-            </Link>
-            <Link href="/services" className={`text-sm text-white hover:text-[#D4AF37] transition-colors ${pathname === '/services' ? 'text-[#D4AF37]' : ''}`}>
-              Services
-            </Link>
-            <Link href="/operational-delivery" className={`text-sm text-white hover:text-[#D4AF37] transition-colors ${pathname === '/operational-delivery' ? 'text-[#D4AF37]' : ''}`}>
-              Operational Delivery
-            </Link>
-            <Link href="/nhs-trusts" className={`text-sm text-white hover:text-[#D4AF37] transition-colors ${pathname === '/nhs-trusts' ? 'text-[#D4AF37]' : ''}`}>
-              NHS Trusts
-            </Link>
-            <Link href="/case-studies" className={`text-sm text-white hover:text-[#D4AF37] transition-colors ${pathname === '/case-studies' ? 'text-[#D4AF37]' : ''}`}>
-              Case Studies
-            </Link>
-            <Link href="/leadership" className={`text-sm text-white hover:text-[#D4AF37] transition-colors ${pathname === '/leadership' ? 'text-[#D4AF37]' : ''}`}>
-              Leadership
-            </Link>
-            <Link href="/governance-compliance" className={`text-sm text-white hover:text-[#D4AF37] transition-colors ${pathname === '/governance-compliance' ? 'text-[#D4AF37]' : ''}`}>
-              Governance
-            </Link>
+          <div className="hidden lg:flex items-center gap-4">
+            {navLinks.filter(l => l.name !== 'Contact').map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`text-sm text-white hover:text-[#D4AF37] transition-colors whitespace-nowrap ${pathname === link.href ? 'text-[#D4AF37]' : ''}`}
+              >
+                {link.name}
+              </Link>
+            ))}
             <Link 
               href="/contact"
-              className="bg-[#D4AF37] text-black px-5 py-2 rounded-lg text-sm font-semibold hover:bg-[#FFD700] transition-all"
+              className="bg-[#D4AF37] text-black px-5 py-2 rounded-lg text-sm font-semibold hover:bg-[#FFD700] transition-all whitespace-nowrap"
             >
               Discuss Requirements
             </Link>

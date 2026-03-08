@@ -4,79 +4,54 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
-      {/* Particle Background */}
-      <div className="particles-bg">
-        <div className="particle" style={{ left: '10%', top: '20%', animationDelay: '0s' }}></div>
-        <div className="particle" style={{ left: '20%', top: '60%', animationDelay: '1s' }}></div>
-        <div className="particle" style={{ left: '30%', top: '40%', animationDelay: '2s' }}></div>
-        <div className="particle" style={{ left: '40%', top: '80%', animationDelay: '1.5s' }}></div>
-        <div className="particle" style={{ left: '50%', top: '30%', animationDelay: '0.5s' }}></div>
-        <div className="particle" style={{ left: '60%', top: '70%', animationDelay: '2.5s' }}></div>
-        <div className="particle" style={{ left: '70%', top: '50%', animationDelay: '1s' }}></div>
-        <div className="particle" style={{ left: '80%', top: '20%', animationDelay: '3s' }}></div>
-        <div className="particle" style={{ left: '90%', top: '60%', animationDelay: '0.8s' }}></div>
-      </div>
-
-      {/* Gradient Overlay */}
-      <div className="gradient-overlay"></div>
+    <section id="home" className="relative min-h-[90vh] flex items-center justify-center bg-black overflow-hidden">
+      {/* Subtle Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.03)_0%,transparent_70%)]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_60%,rgba(0,0,0,0.8)_100%)]"></div>
 
       {/* Content */}
-      <div className="container-custom relative z-10 text-center">
-        {/* Healthcare Badge */}
-        <div className="badge mx-auto mb-8 animate-fade-in">
-          <span className="text-gold">&#9877;</span>
-          Healthcare Operational Workforce Partner
+      <div className="container-custom relative z-10 text-center px-4">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 border border-[#D4AF37]/30 bg-[#D4AF37]/5 rounded-full px-5 py-2 mb-8">
+          <span className="text-[#D4AF37] text-sm">&#9877;</span>
+          <span className="text-gray-300 text-sm tracking-wide">Healthcare Operational Workforce Partner</span>
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 animate-slide-up leading-tight">
-          <span className="text-white">Healthcare Operational Workforce</span><br />
-          <span className="text-white">and Service Support for</span><br />
-          <span className="text-gold">Patient Access, RTT and Elective Recovery</span>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold mb-6 leading-tight max-w-5xl mx-auto">
+          <span className="text-white">Healthcare Operational</span><br className="hidden sm:block" />
+          <span className="text-white"> Workforce and Service Support for</span><br />
+          <span className="text-[#D4AF37]">Patient Access, RTT and Elective Recovery</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
+        <p className="text-base md:text-lg text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
           T21 Services supports healthcare organisations, NHS trusts and operational partners with experienced workforce across patient access administration, RTT validation, waiting list management, clinical coding and healthcare data quality.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-scale-in" style={{ animationDelay: '0.6s' }}>
-          <Link href="/services" className="btn-gold text-lg px-8 py-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <Link href="/services" className="bg-[#D4AF37] text-black px-8 py-3.5 rounded-lg font-semibold hover:bg-[#FFD700] transition-all text-base">
             Our Services
           </Link>
-          <Link href="/contact" className="btn-gold-outline text-lg px-8 py-4">
+          <Link href="/contact" className="border border-[#D4AF37] text-[#D4AF37] px-8 py-3.5 rounded-lg font-semibold hover:bg-[#D4AF37] hover:text-black transition-all text-base">
             Discuss Requirements
           </Link>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.9s' }}>
-          <div className="glass-card text-center">
-            <div className="text-4xl font-bold text-gold mb-2">500,000+</div>
-            <div className="text-sm text-gray-300">RTT Pathways Validated</div>
-          </div>
-          <div className="glass-card text-center">
-            <div className="text-4xl font-bold text-gold mb-2">50+</div>
-            <div className="text-sm text-gray-300">Experienced Workforce</div>
-          </div>
-          <div className="glass-card text-center">
-            <div className="text-4xl font-bold text-gold mb-2">40+</div>
-            <div className="text-sm text-gray-300">NHS Trusts Supported</div>
-          </div>
-          <div className="glass-card text-center">
-            <div className="text-4xl font-bold text-gold mb-2">5+</div>
-            <div className="text-sm text-gray-300">Years Supporting Healthcare</div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="text-gold text-sm mb-2">Scroll to explore</div>
-          <div className="w-6 h-10 border-2 border-gold rounded-full mx-auto flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-gold rounded-full animate-pulse"></div>
-          </div>
+        {/* Stats Row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
+          {[
+            { value: '500,000+', label: 'RTT Pathways Validated' },
+            { value: '50+', label: 'Experienced Workforce' },
+            { value: '40+', label: 'NHS Trusts Supported' },
+            { value: '5+', label: 'Years Supporting Healthcare' },
+          ].map((stat, i) => (
+            <div key={i} className="border border-gray-800 bg-gray-900/30 rounded-xl p-4 md:p-5 text-center">
+              <div className="text-2xl md:text-3xl font-bold text-[#D4AF37] mb-1">{stat.value}</div>
+              <div className="text-xs md:text-sm text-gray-400">{stat.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

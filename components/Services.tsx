@@ -72,13 +72,12 @@ export default function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <Link
               key={index}
               href={service.link}
-              className="glass-card group cursor-pointer"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="border border-gray-800 bg-gray-900/20 rounded-2xl p-6 md:p-8 group cursor-pointer hover:border-[#D4AF37]/30 transition-all"
             >
               {/* Icon */}
               <div className="w-16 h-16 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#D4AF37]/20 transition-all">
@@ -91,7 +90,7 @@ export default function Services() {
               </h3>
 
               {/* Description */}
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-400 mb-5 text-sm leading-relaxed">
                 {service.description}
               </p>
 

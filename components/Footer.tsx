@@ -23,6 +23,7 @@ export default function Footer() {
             <div className="flex gap-2 flex-wrap">
               <span className="text-xs bg-gray-800 text-gray-300 px-3 py-1 rounded-full">Data Protection Compliant</span>
               <span className="text-xs bg-gray-800 text-gray-300 px-3 py-1 rounded-full">Professional Standards</span>
+              <span className="text-xs bg-gray-800 text-gray-300 px-3 py-1 rounded-full">Operational Delivery Support</span>
             </div>
           </div>
           <div>
@@ -38,10 +39,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-white mb-4">Organisation</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link href="/leadership" className="hover:text-gold transition-colors">Leadership</Link></li>
-              <li><Link href="/nhs-trusts" className="hover:text-gold transition-colors">NHS Trusts</Link></li>
+              <li><Link href="/programme-mobilisation" className="hover:text-gold transition-colors">Programme Mobilisation</Link></li>
               <li><Link href="/case-studies" className="hover:text-gold transition-colors">Case Studies</Link></li>
               <li><Link href="/governance-compliance" className="hover:text-gold transition-colors">Governance &amp; Compliance</Link></li>
+              <li><Link href="/nhs-trusts" className="hover:text-gold transition-colors">NHS Trusts</Link></li>
               <li><Link href="/insourcing-partners" className="hover:text-gold transition-colors">Insourcing Partners</Link></li>
             </ul>
           </div>
