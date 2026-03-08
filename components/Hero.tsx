@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center justify-center bg-black overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden pt-24">
       {/* Subtle Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.03)_0%,transparent_70%)]"></div>
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_60%,rgba(0,0,0,0.8)_100%)]"></div>
@@ -12,8 +12,7 @@ export default function Hero() {
       {/* Content */}
       <div className="container-custom relative z-10 text-center px-4">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 border border-[#D4AF37]/30 bg-[#D4AF37]/5 rounded-full px-5 py-2 mb-8">
-          <span className="text-[#D4AF37] text-sm">&#9877;</span>
+        <div className="inline-flex items-center border border-[#D4AF37]/30 bg-[#D4AF37]/5 rounded-full px-5 py-2 mb-8">
           <span className="text-gray-300 text-sm tracking-wide">Healthcare Operational Workforce Partner</span>
         </div>
 
