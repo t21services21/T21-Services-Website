@@ -52,6 +52,33 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  if (submitStatus === 'success') {
+    return (
+      <main className="min-h-screen bg-black">
+        <Navigation />
+        <section className="min-h-[85vh] flex items-center justify-center px-4">
+          <div className="max-w-lg w-full text-center border border-[#D4AF37]/30 bg-gray-900/40 rounded-2xl p-10 md:p-14">
+            <div className="w-20 h-20 bg-[#D4AF37]/20 rounded-full flex items-center justify-center mx-auto mb-8">
+              <svg className="w-10 h-10 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h1 className="text-3xl font-playfair font-bold text-[#D4AF37] mb-4">Enquiry Received</h1>
+            <p className="text-gray-300 mb-3">Thank you for contacting T21 Services. Your enquiry has been received and a member of our team will respond within 24 hours.</p>
+            {referenceNumber && (
+              <p className="text-sm text-gray-400 mb-4">Reference: <span className="text-[#D4AF37] font-semibold">{referenceNumber}</span></p>
+            )}
+            <p className="text-sm text-gray-400 mb-8">A confirmation has been sent to your email. For immediate assistance, call <strong className="text-white">+44 (0) 203 375 2061</strong>.</p>
+            <button onClick={() => setSubmitStatus('idle')} className="bg-[#D4AF37] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#FFD700] transition-all">
+              Send Another Enquiry
+            </button>
+          </div>
+        </section>
+        <Footer />
+      </main>
+    );
+  }
+
   return (
     <main className="min-h-screen bg-black">
       <Navigation />
@@ -136,34 +163,7 @@ export default function ContactPage() {
                 Send an <span className="text-[#D4AF37]">Enquiry</span>
               </h2>
 
-              {submitStatus === 'success' ? (
-                <div className="glass-card border-[#D4AF37] border-2">
-                  <div className="text-center py-8">
-                    <div className="w-20 h-20 bg-[#D4AF37]/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <svg className="w-10 h-10 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <h3 className="text-2xl font-playfair font-bold text-[#D4AF37] mb-4">Enquiry Received</h3>
-                    <p className="text-gray-300 mb-3">
-                      Thank you for contacting T21 Services. Your enquiry has been received and a member of our team will respond within 24 hours.
-                    </p>
-                    {referenceNumber && (
-                      <p className="text-sm text-gray-400 mb-6">
-                        Your reference number: <span className="text-[#D4AF37] font-semibold">{referenceNumber}</span>
-                      </p>
-                    )}
-                    <p className="text-sm text-gray-400 mb-6">
-                      A confirmation has been sent to your email address. If you require immediate assistance, please call us on <strong className="text-white">+44 (0) 203 375 2061</strong>.
-                    </p>
-                    <button onClick={() => setSubmitStatus('idle')}
-                      className="bg-[#D4AF37] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#FFD700] transition-all">
-                      Send Another Enquiry
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
                   {submitStatus === 'error' && (
                     <div className="bg-red-900/30 border border-red-500/50 rounded-lg p-4">
                       <p className="text-red-300 font-medium mb-1">We were unable to process your enquiry at this time.</p>
@@ -237,7 +237,6 @@ export default function ContactPage() {
 
                   <p className="text-sm text-gray-400 text-center">We respond to all enquiries within 24 hours</p>
                 </form>
-              )}
             </div>
           </div>
         </div>
