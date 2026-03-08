@@ -315,13 +315,8 @@ input::placeholder, textarea::placeholder {
 
 /* Link Styles */
 a {
-  color: #D4AF37;
   text-decoration: none;
   transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #FFD700;
 }
 
 /* Responsive Typography */
