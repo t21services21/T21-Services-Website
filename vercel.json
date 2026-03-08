@@ -1,0 +1,37 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "training.t21services.co.uk"
+        }
+      ],
+      "destination": "https://www.t21services.co.uk/services/training/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "app.t21services.co.uk"
+        }
+      ],
+      "destination": "https://www.t21services.co.uk/services/software/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "recruitment.t21services.co.uk"
+        }
+      ],
+      "destination": "https://www.t21services.co.uk/services/recruitment/:path*",
+      "permanent": false
+    }
+  ]
+}
