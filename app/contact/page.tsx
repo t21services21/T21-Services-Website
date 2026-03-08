@@ -19,7 +19,6 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [referenceNumber, setReferenceNumber] = useState('');
-  const [debugInfo, setDebugInfo] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,10 +32,7 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       });
 
-      const txt = await response.text();
-      setDebugInfo(`${response.status}: ${txt.substring(0,300)}`);
-      let result: any = {};
-      try { result = JSON.parse(txt); } catch {}
+      const result = await response.json().catch(() => ({}));
 
       if (response.ok && result.success) {
         setSubmitStatus('success');
@@ -45,8 +41,7 @@ export default function ContactPage() {
       } else {
         setSubmitStatus('error');
       }
-    } catch (error: any) {
-      setDebugInfo(`FETCH ERROR: ${error.message}`);
+    } catch (error) {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -179,12 +174,6 @@ export default function ContactPage() {
                       </p>
                     </div>
                   )}
-                  {debugInfo && (
-                    <div className="bg-blue-900/30 border border-blue-500/50 rounded-lg p-3">
-                      <p className="text-blue-300 text-xs font-mono break-all">{debugInfo}</p>
-                    </div>
-                  )}
-
                   <div>
                     <label htmlFor="name" className="block text-gray-300 mb-2 font-medium">Your Name *</label>
                     <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange}
