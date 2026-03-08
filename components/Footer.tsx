@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2025 T21 Services UK. All rights reserved.</p>
+          <p>&copy; 2026 T21 Services UK. All rights reserved.</p>
           <div className="mt-4 space-x-4">
             <Link href="/privacy" className="hover:text-gold transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-gold transition-colors">Terms of Service</Link>

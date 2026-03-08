@@ -50,9 +50,20 @@ export default function GovernanceCompliance() {
 
       <section className="py-16 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-playfair font-bold text-white mb-8 text-center">Mandatory <span className="text-[#D4AF37]">Training</span></h2>
+          <h2 className="text-3xl font-playfair font-bold text-white mb-8 text-center">Deployed Workforce <span className="text-[#D4AF37]">Compliance</span></h2>
+          <div className="glass-card max-w-3xl mx-auto mb-8">
+            <p className="text-gray-300 text-lg mb-4 font-semibold">Every workforce member deployed by T21 Services is fully compliance-checked before deployment:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {['Enhanced DBS checked and verified', 'Right to Work in the UK confirmed', 'Professional references obtained', 'Identity verification completed', 'Occupational health clearance', 'Confidentiality agreements signed'].map((item, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <span className="text-[#D4AF37]">&#10003;</span>
+                  <span className="text-gray-300">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="glass-card max-w-3xl mx-auto">
-            <p className="text-gray-300 text-lg mb-6">All T21 Services workforce members complete mandatory training covering:</p>
+            <p className="text-gray-300 text-lg mb-6">All workforce members also complete mandatory training covering:</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {['Information Governance', 'Data Protection and GDPR', 'NHS Caldicott Principles', 'Patient Confidentiality', 'Cyber Security Awareness', 'Safeguarding', 'Equality and Diversity', 'Health and Safety'].map((item, i) => (
                 <div key={i} className="flex items-center gap-2">

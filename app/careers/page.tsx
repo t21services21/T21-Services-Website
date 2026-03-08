@@ -3,84 +3,79 @@
 import { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import FloatingElements from '@/components/FloatingElements';
 import Link from 'next/link';
 
 export default function CareersPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const jobCategories = [
-    { id: 'all', name: 'All Positions', count: 12 },
-    { id: 'healthcare', name: 'Healthcare', count: 5 },
-    { id: 'it', name: 'IT & Technology', count: 4 },
-    { id: 'business', name: 'Business', count: 3 }
+    { id: 'all', name: 'All Positions', count: 6 },
+    { id: 'validation', name: 'RTT & Validation', count: 2 },
+    { id: 'patient-access', name: 'Patient Access', count: 2 },
+    { id: 'data', name: 'Coding & Data', count: 2 }
   ];
 
   const jobs = [
     {
       id: 1,
-      title: 'RTT Coordinator',
-      category: 'healthcare',
-      location: 'Liverpool, UK',
-      type: 'Permanent',
-      salary: '£28,000 - £35,000',
-      description: 'Manage NHS referral to treatment pathways, ensure compliance with 18-week targets.',
-      requirements: ['NHS experience', 'RTT knowledge', 'Data analysis skills'],
-      posted: '2 days ago'
+      title: 'RTT Validator',
+      category: 'validation',
+      location: 'Remote / NHS Trust Sites',
+      type: 'Contract',
+      description: 'Experienced RTT validator supporting pathway validation, waiting list management and elective recovery programmes across NHS trusts.',
+      requirements: ['RTT validation experience', 'NHS PAS systems knowledge', 'Pathway management understanding', 'Attention to detail'],
+      posted: 'Ongoing recruitment'
     },
     {
       id: 2,
-      title: 'Healthcare Administrator',
-      category: 'healthcare',
-      location: 'Manchester, UK',
-      type: 'Permanent',
-      salary: '£24,000 - £28,000',
-      description: 'Support clinical teams with administrative tasks, patient records, and scheduling.',
-      requirements: ['Admin experience', 'NHS knowledge', 'Excellent communication'],
-      posted: '5 days ago'
+      title: 'Waiting List Coordinator',
+      category: 'validation',
+      location: 'Remote / NHS Trust Sites',
+      type: 'Contract',
+      description: 'Experienced waiting list coordinator supporting PTL management, pathway tracking and elective recovery operational programmes.',
+      requirements: ['Waiting list management experience', 'NHS operational knowledge', 'Data analysis skills', 'Multi-specialty experience'],
+      posted: 'Ongoing recruitment'
     },
     {
       id: 3,
-      title: 'Senior Software Developer',
-      category: 'it',
-      location: 'Remote',
-      type: 'Permanent',
-      salary: '£50,000 - £70,000',
-      description: 'Build healthcare technology solutions using Python, React, and cloud platforms.',
-      requirements: ['5+ years experience', 'Python/React', 'Healthcare domain knowledge'],
-      posted: '1 week ago'
+      title: 'Patient Access Officer',
+      category: 'patient-access',
+      location: 'Remote / NHS Trust Sites',
+      type: 'Contract',
+      description: 'Experienced patient access officer supporting referral management, appointment booking and patient pathway administration.',
+      requirements: ['Patient access experience', 'NHS booking systems', 'Referral processing', 'Patient communication skills'],
+      posted: 'Ongoing recruitment'
     },
     {
       id: 4,
-      title: 'Data Analyst',
-      category: 'it',
-      location: 'London, UK',
+      title: 'Pathway Coordinator',
+      category: 'patient-access',
+      location: 'Remote / NHS Trust Sites',
       type: 'Contract',
-      salary: '£400 - £500/day',
-      description: 'Analyze healthcare data, create dashboards, support decision-making.',
-      requirements: ['SQL/Python', 'Data visualization', 'Healthcare experience'],
-      posted: '3 days ago'
+      description: 'Experienced pathway coordinator supporting the full patient pathway lifecycle from referral through to discharge and pathway closure.',
+      requirements: ['Pathway coordination experience', 'NHS systems knowledge', 'Clinical correspondence', 'Multi-specialty working'],
+      posted: 'Ongoing recruitment'
     },
     {
       id: 5,
-      title: 'Business Analyst',
-      category: 'business',
-      location: 'Birmingham, UK',
-      type: 'Permanent',
-      salary: '£35,000 - £45,000',
-      description: 'Bridge business and technology, gather requirements, improve processes.',
-      requirements: ['BA experience', 'Stakeholder management', 'Agile methodology'],
-      posted: '1 day ago'
+      title: 'Clinical Coder',
+      category: 'data',
+      location: 'Remote / NHS Trust Sites',
+      type: 'Contract',
+      description: 'Experienced clinical coder supporting healthcare data quality and coding accuracy across NHS trust specialties.',
+      requirements: ['Clinical coding qualification', 'ICD-10 / OPCS-4 experience', 'NHS coding standards', 'Multi-specialty coding'],
+      posted: 'Ongoing recruitment'
     },
     {
       id: 6,
-      title: 'Clinical Support Worker',
-      category: 'healthcare',
-      location: 'Leeds, UK',
-      type: 'Temporary',
-      salary: '£12 - £15/hour',
-      description: 'Provide direct patient care support in hospital or clinic settings.',
-      requirements: ['Care certificate', 'Compassionate', 'Team player'],
-      posted: '4 days ago'
+      title: 'Data Quality Analyst',
+      category: 'data',
+      location: 'Remote / NHS Trust Sites',
+      type: 'Contract',
+      description: 'Experienced data quality analyst supporting PAS data cleansing, duplicate record management and healthcare information accuracy.',
+      requirements: ['Healthcare data experience', 'PAS systems knowledge', 'Data cleansing skills', 'Reporting and analysis'],
+      posted: 'Ongoing recruitment'
     }
   ];
 
@@ -91,99 +86,63 @@ export default function CareersPage() {
   return (
     <main className="min-h-screen bg-black">
       <Navigation />
+      <FloatingElements />
 
-      {/* Hero */}
       <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Current <span className="text-[#D4AF37]">Opportunities</span>
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-playfair font-bold mb-6">
+            Join Our <span className="text-[#D4AF37]">Workforce</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join leading organizations across healthcare, IT, and business sectors
+            Opportunities for experienced healthcare operational professionals across NHS trusts
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link 
-              href="#jobs"
-              className="bg-[#D4AF37] text-black px-8 py-4 rounded-lg font-semibold hover:bg-[#FFD700] transition-all"
-            >
-              Browse Jobs
+            <Link href="#jobs" className="bg-[#D4AF37] text-black px-8 py-4 rounded-lg font-semibold hover:bg-[#FFD700] transition-all">
+              View Opportunities
             </Link>
-            <Link 
-              href="/careers/submit-cv"
-              className="border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-4 rounded-lg font-semibold hover:bg-[#D4AF37] hover:text-black transition-all"
-            >
-              Submit Your CV
+            <Link href="/careers/submit-cv" className="border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-4 rounded-lg font-semibold hover:bg-[#D4AF37] hover:text-black transition-all">
+              Register Your Interest
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Job Categories */}
       <section id="jobs" className="py-12 px-4 bg-black">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             {jobCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
+              <button key={category.id} onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                  selectedCategory === category.id
-                    ? 'bg-[#D4AF37] text-black'
-                    : 'bg-gray-900 text-gray-300 hover:bg-gray-800'
-                }`}
-              >
+                  selectedCategory === category.id ? 'bg-[#D4AF37] text-black' : 'bg-gray-900 text-gray-300 hover:bg-gray-800'
+                }`}>
                 {category.name} ({category.count})
               </button>
             ))}
           </div>
 
-          {/* Job Listings */}
           <div className="space-y-6">
             {filteredJobs.map((job) => (
-              <div 
-                key={job.id}
-                className="bg-gradient-to-br from-gray-900 to-black border border-[#D4AF37]/20 rounded-lg p-8 hover:border-[#D4AF37] transition-all"
-              >
+              <div key={job.id} className="glass-card hover:border-[#D4AF37] transition-all">
                 <div className="flex flex-wrap justify-between items-start gap-4 mb-4">
                   <div>
                     <h3 className="text-2xl font-bold text-[#D4AF37] mb-2">{job.title}</h3>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-                      <span className="flex items-center gap-1">
-                        📍 {job.location}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        💼 {job.type}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        💰 {job.salary}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        🕐 {job.posted}
-                      </span>
+                      <span>{job.location}</span>
+                      <span>{job.type}</span>
+                      <span>{job.posted}</span>
                     </div>
                   </div>
-                  <Link
-                    href="/consultation"
-                    className="bg-[#D4AF37] text-black px-6 py-3 rounded-lg font-semibold hover:bg-[#FFD700] transition-all whitespace-nowrap"
-                  >
-                    Apply Now
+                  <Link href="/contact" className="bg-[#D4AF37] text-black px-6 py-3 rounded-lg font-semibold hover:bg-[#FFD700] transition-all whitespace-nowrap">
+                    Express Interest
                   </Link>
                 </div>
-
                 <p className="text-gray-300 mb-4">{job.description}</p>
-
-                <div className="mb-4">
-                  <h4 className="text-sm font-bold text-[#D4AF37] mb-2">Key Requirements:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {job.requirements.map((req, index) => (
-                      <span 
-                        key={index}
-                        className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm"
-                      >
-                        ✓ {req}
-                      </span>
-                    ))}
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  {job.requirements.map((req, index) => (
+                    <span key={index} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">
+                      {req}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
@@ -191,29 +150,39 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Job Alerts */}
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-playfair font-bold text-center mb-8">
+            Why Work With <span className="text-[#D4AF37]">T21 Services</span>
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="glass-card text-center">
+              <h3 className="text-lg font-bold text-[#D4AF37] mb-3">Diverse NHS Experience</h3>
+              <p className="text-gray-300 text-sm">Work across 40+ NHS trusts gaining broad operational experience across specialties and systems</p>
+            </div>
+            <div className="glass-card text-center">
+              <h3 className="text-lg font-bold text-[#D4AF37] mb-3">Professional Development</h3>
+              <p className="text-gray-300 text-sm">Access to TQUK-approved training programmes and continuous professional development</p>
+            </div>
+            <div className="glass-card text-center">
+              <h3 className="text-lg font-bold text-[#D4AF37] mb-3">Flexible Opportunities</h3>
+              <p className="text-gray-300 text-sm">Remote and on-site roles with flexible arrangements across healthcare operational services</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-black">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Don't See Your <span className="text-[#D4AF37]">Perfect Role?</span>
+          <h2 className="text-3xl font-playfair font-bold mb-6">
+            Don't See Your <span className="text-[#D4AF37]">Role?</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Submit your CV and we'll match you with opportunities as they become available
+            Register your interest and we will contact you when suitable opportunities arise
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link 
-              href="/careers/submit-cv"
-              className="bg-[#D4AF37] text-black px-8 py-4 rounded-lg font-semibold hover:bg-[#FFD700] transition-all text-lg"
-            >
-              Submit Your CV
-            </Link>
-            <Link 
-              href="/careers/advice"
-              className="border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-4 rounded-lg font-semibold hover:bg-[#D4AF37] hover:text-black transition-all text-lg"
-            >
-              Career Advice
-            </Link>
-          </div>
+          <Link href="/careers/submit-cv" className="bg-[#D4AF37] text-black px-8 py-4 rounded-lg font-semibold hover:bg-[#FFD700] transition-all text-lg">
+            Register Your Interest
+          </Link>
         </div>
       </section>
 

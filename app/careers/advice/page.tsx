@@ -97,8 +97,8 @@ export default function CareerAdvicePage() {
       action: 'Get Checklist'
     },
     {
-      title: 'Salary Guide 2025',
-      description: 'Current salary ranges for healthcare, IT, and business roles',
+      title: 'Salary Guide 2026',
+      description: 'Current salary ranges for healthcare operational roles',
       icon: '💷',
       action: 'View Guide'
     },

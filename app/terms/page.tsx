@@ -13,7 +13,7 @@ export default function TermsPage() {
           <h1 className="text-5xl font-bold mb-6">
             Terms of <span className="text-[#D4AF37]">Service</span>
           </h1>
-          <p className="text-gray-400 mb-12">Last Updated: November 1, 2025</p>
+          <p className="text-gray-400 mb-12">Last Updated: March 1, 2026</p>
 
           <div className="space-y-8 text-gray-300">
             <section>
@@ -27,12 +27,12 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-[#D4AF37] mb-4">2. Services Provided</h2>
               <p className="mb-4">T21 Services UK provides:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>TQUK-approved training and certification programs</li>
-                <li>Professional development courses</li>
-                <li>Recruitment and staffing services</li>
-                <li>Software and AI solutions</li>
-                <li>Business consultancy services</li>
-                <li>International training programs</li>
+                <li>Healthcare operational workforce services</li>
+                <li>RTT validation and elective recovery support</li>
+                <li>Patient access and pathway management workforce</li>
+                <li>Clinical coding and healthcare data quality services</li>
+                <li>Workforce development and TQUK-approved training programmes</li>
+                <li>Insourcing partnership workforce provision</li>
               </ul>
             </section>
 

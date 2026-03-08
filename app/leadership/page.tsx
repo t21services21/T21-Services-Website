@@ -23,15 +23,15 @@ export default function Leadership() {
           <div className="glass-card">
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="w-32 h-32 bg-[#D4AF37]/10 rounded-full flex items-center justify-center flex-shrink-0 mx-auto md:mx-0">
-                <span className="text-[#D4AF37] text-4xl font-playfair font-bold">CEO</span>
+                <span className="text-[#D4AF37] text-4xl font-playfair font-bold">TO</span>
               </div>
               <div>
-                <h2 className="text-2xl font-playfair font-bold text-white mb-2">Chief Executive Officer</h2>
-                <p className="text-[#D4AF37] font-semibold mb-4">Founder and CEO, T21 Services</p>
+                <h2 className="text-2xl font-playfair font-bold text-white mb-2">Ambassador Tosin Owonifari</h2>
+                <p className="text-[#D4AF37] font-semibold mb-4">Founder and Chief Executive Officer, T21 Services</p>
                 <div className="space-y-4 text-gray-300 leading-relaxed">
-                  <p>With over 14 years of healthcare operational experience, the CEO of T21 Services brings direct, hands-on knowledge of NHS operational services spanning patient access administration, RTT validation, waiting list management, clinical coding and healthcare data quality.</p>
+                  <p>With over 14 years of healthcare operational experience, Ambassador Tosin Owonifari brings direct, hands-on knowledge of NHS operational services spanning patient access administration, RTT validation, waiting list management, clinical coding and healthcare data quality.</p>
                   <p>This experience has been gained through direct operational roles across more than 40 NHS trusts throughout England, providing a comprehensive understanding of the operational challenges faced by healthcare organisations delivering patient care.</p>
-                  <p>T21 Services was founded to provide healthcare organisations with experienced operational workforce capacity, drawing on this extensive direct experience to deliver services that understand the realities of NHS operational environments.</p>
+                  <p>Ambassador Owonifari founded T21 Services to provide healthcare organisations with experienced operational workforce capacity, drawing on this extensive direct experience to deliver services that understand the realities of NHS operational environments.</p>
                 </div>
                 <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="text-center">

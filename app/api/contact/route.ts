@@ -111,14 +111,14 @@ export async function POST(request: NextRequest) {
             
             <p style="margin-top: 20px;">If you need immediate assistance, please call us:</p>
             <ul>
-              <li>UK: +44 (0) 203 375 2061</li>
-              <li>Nigeria: +234 816 377 5394</li>
+              <li>Phone: +44 (0) 203 375 2061</li>
+              <li>Email: admin@t21services.co.uk</li>
             </ul>
           </div>
           
           <div class="footer">
             <p><strong>T21 Services UK</strong></p>
-            <p>TQUK Approved Centre #36257481088</p>
+            <p>Healthcare Operational Workforce Services</p>
             <p>64 Upper Parliament Street, Liverpool, L8 7LF</p>
           </div>
         </div>

@@ -11,233 +11,135 @@ export default function TeamPage() {
       <Navigation />
       <FloatingElements />
       
-      {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Meet Our <span className="text-[#D4AF37]">Team</span>
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-playfair font-bold mb-6">
+            Our <span className="text-[#D4AF37]">Team</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            The experts behind your success
+            Experienced healthcare operational professionals delivering quality services across NHS trusts
           </p>
         </div>
       </section>
 
-      {/* Leadership Team */}
       <section className="py-20 px-4 bg-black">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-playfair font-bold text-center mb-12">
             Leadership <span className="text-[#D4AF37]">Team</span>
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Founder & CEO */}
-            <div className="bg-gradient-to-br from-gray-900 to-black border border-[#D4AF37]/20 rounded-lg p-8 hover:border-[#D4AF37] transition-all text-center">
-              <div className="w-32 h-32 bg-[#D4AF37] rounded-full mx-auto mb-6 flex items-center justify-center text-6xl">
-                👨‍💼
+          <div className="max-w-3xl mx-auto">
+            <div className="glass-card">
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="w-28 h-28 bg-[#D4AF37]/10 rounded-full flex items-center justify-center flex-shrink-0 mx-auto md:mx-0">
+                  <span className="text-[#D4AF37] text-3xl font-playfair font-bold">TO</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-playfair font-bold text-white mb-1">Ambassador Tosin Owonifari</h3>
+                  <p className="text-[#D4AF37] font-semibold mb-4">Founder and Chief Executive Officer</p>
+                  <p className="text-gray-300 leading-relaxed">
+                    Over 14 years of direct healthcare operational experience across 40+ NHS trusts. Specialist in RTT validation, patient access administration, waiting list management and healthcare data quality operations.
+                  </p>
+                  <div className="mt-4">
+                    <a href="https://www.linkedin.com/in/tosin-owonifari" target="_blank" rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#FFD700] transition-colors text-sm">
+                      LinkedIn Profile
+                    </a>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold mb-2">Amb. Tosin M. Owonifari</h3>
-              <p className="text-[#D4AF37] mb-4">Founder & CEO</p>
-              <p className="text-gray-300 mb-6">
-                Visionary leader with a passion for education, technology, and social impact
-              </p>
-              <a 
-                href="https://www.linkedin.com/in/tosin-owonifari" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#FFD700] transition-colors"
-              >
-                LinkedIn →
-              </a>
-            </div>
-
-            {/* Director of Training */}
-            <div className="bg-gradient-to-br from-gray-900 to-black border border-[#D4AF37]/20 rounded-lg p-8 hover:border-[#D4AF37] transition-all text-center">
-              <div className="w-32 h-32 bg-[#D4AF37] rounded-full mx-auto mb-6 flex items-center justify-center text-6xl">
-                👨‍🏫
-              </div>
-              <h3 className="text-2xl font-bold mb-2">Director of Training</h3>
-              <p className="text-[#D4AF37] mb-4">Training Lead</p>
-              <p className="text-gray-300 mb-6">
-                Expert in curriculum development and TQUK-endorsed training programs
-              </p>
-              <a 
-                href="https://www.linkedin.com" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#FFD700] transition-colors"
-              >
-                LinkedIn →
-              </a>
-            </div>
-
-            {/* Head of Recruitment */}
-            <div className="bg-gradient-to-br from-gray-900 to-black border border-[#D4AF37]/20 rounded-lg p-8 hover:border-[#D4AF37] transition-all text-center">
-              <div className="w-32 h-32 bg-[#D4AF37] rounded-full mx-auto mb-6 flex items-center justify-center text-6xl">
-                👩‍💼
-              </div>
-              <h3 className="text-2xl font-bold mb-2">Head of Recruitment</h3>
-              <p className="text-[#D4AF37] mb-4">Recruitment Lead</p>
-              <p className="text-gray-300 mb-6">
-                Specialist in healthcare and business recruitment with 95% success rate
-              </p>
-              <a 
-                href="https://www.linkedin.com" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#FFD700] transition-colors"
-              >
-                LinkedIn →
-              </a>
-            </div>
-
-            {/* Head of Software */}
-            <div className="bg-gradient-to-br from-gray-900 to-black border border-[#D4AF37]/20 rounded-lg p-8 hover:border-[#D4AF37] transition-all text-center">
-              <div className="w-32 h-32 bg-[#D4AF37] rounded-full mx-auto mb-6 flex items-center justify-center text-6xl">
-                👨‍💻
-              </div>
-              <h3 className="text-2xl font-bold mb-2">Head of Software</h3>
-              <p className="text-[#D4AF37] mb-4">Technology Lead</p>
-              <p className="text-gray-300 mb-6">
-                Leading development of RTT platform and healthcare technology solutions
-              </p>
-              <a 
-                href="https://www.linkedin.com" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#FFD700] transition-colors"
-              >
-                LinkedIn →
-              </a>
-            </div>
-
-            {/* Head of International */}
-            <div className="bg-gradient-to-br from-gray-900 to-black border border-[#D4AF37]/20 rounded-lg p-8 hover:border-[#D4AF37] transition-all text-center">
-              <div className="w-32 h-32 bg-[#D4AF37] rounded-full mx-auto mb-6 flex items-center justify-center text-6xl">
-                🌍
-              </div>
-              <h3 className="text-2xl font-bold mb-2">Head of International</h3>
-              <p className="text-[#D4AF37] mb-4">Global Programs</p>
-              <p className="text-gray-300 mb-6">
-                Managing leadership programs across UK, Europe, USA, and Africa
-              </p>
-              <a 
-                href="https://www.linkedin.com" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#FFD700] transition-colors"
-              >
-                LinkedIn →
-              </a>
-            </div>
-
-            {/* Head of Business Dev */}
-            <div className="bg-gradient-to-br from-gray-900 to-black border border-[#D4AF37]/20 rounded-lg p-8 hover:border-[#D4AF37] transition-all text-center">
-              <div className="w-32 h-32 bg-[#D4AF37] rounded-full mx-auto mb-6 flex items-center justify-center text-6xl">
-                📊
-              </div>
-              <h3 className="text-2xl font-bold mb-2">Head of Business Dev</h3>
-              <p className="text-[#D4AF37] mb-4">Business Development</p>
-              <p className="text-gray-300 mb-6">
-                Strategic partnerships and consultancy services for organizational growth
-              </p>
-              <a 
-                href="https://www.linkedin.com" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#D4AF37] hover:text-[#FFD700] transition-colors"
-              >
-                LinkedIn →
-              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Join Our Team */}
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Join Our <span className="text-[#D4AF37]">Team</span>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-playfair font-bold text-center mb-12">
+            Operational <span className="text-[#D4AF37]">Workforce</span>
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            We're always looking for talented individuals to join our growing team
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-gray-900 to-black border border-[#D4AF37]/20 rounded-lg p-6">
-              <div className="text-4xl mb-3">🚀</div>
-              <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Growth Opportunities</h3>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="glass-card text-center">
+              <div className="w-16 h-16 bg-[#D4AF37]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-[#D4AF37] text-2xl font-bold">50+</span>
+              </div>
+              <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Experienced Workforce</h3>
               <p className="text-gray-300 text-sm">
-                Advance your career with training and development
+                Experienced healthcare operational staff across RTT validation, patient access, clinical coding and data quality
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-gray-900 to-black border border-[#D4AF37]/20 rounded-lg p-6">
-              <div className="text-4xl mb-3">🌍</div>
-              <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Global Impact</h3>
+            <div className="glass-card text-center">
+              <div className="w-16 h-16 bg-[#D4AF37]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-[#D4AF37] text-xl font-bold">TL</span>
+              </div>
+              <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Team Lead Oversight</h3>
               <p className="text-gray-300 text-sm">
-                Work on projects that make a difference worldwide
+                Structured delivery with team leads providing quality oversight, coordination and performance management
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-gray-900 to-black border border-[#D4AF37]/20 rounded-lg p-6">
-              <div className="text-4xl mb-3">🤝</div>
-              <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Great Culture</h3>
+            <div className="glass-card text-center">
+              <div className="w-16 h-16 bg-[#D4AF37]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-[#D4AF37] text-xl font-bold">QA</span>
+              </div>
+              <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Quality Assurance</h3>
               <p className="text-gray-300 text-sm">
-                Join a supportive, innovative, and diverse team
+                Dedicated quality assurance supporting accuracy monitoring, work sampling and continuous improvement
               </p>
             </div>
           </div>
-
-          <Link 
-            href="/consultation"
-            className="inline-block bg-[#D4AF37] text-black px-8 py-4 rounded-lg font-semibold hover:bg-[#FFD700] transition-all text-lg"
-          >
-            View Open Positions
-          </Link>
         </div>
       </section>
 
-      {/* Team Values */}
       <section className="py-20 px-4 bg-black">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16">
-            Our Team <span className="text-[#D4AF37]">Values</span>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-playfair font-bold text-center mb-12">
+            Workforce <span className="text-[#D4AF37]">Compliance</span>
           </h2>
-
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-5xl mb-4">⭐</div>
-              <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Excellence</h3>
-              <p className="text-gray-300 text-sm">
-                We strive for the highest standards
-              </p>
+          <div className="glass-card max-w-3xl mx-auto">
+            <p className="text-gray-300 text-lg mb-6">
+              All T21 Services workforce members deployed to healthcare organisations are fully compliance-checked and meet NHS operational requirements:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {['DBS checked', 'Information Governance trained', 'Data Protection and GDPR compliant', 'NHS Caldicott Principles trained', 'Safeguarding trained', 'Cyber Security Awareness trained', 'Patient Confidentiality trained', 'Right to Work verified'].map((item, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <span className="text-[#D4AF37]">&#10003;</span>
+                  <span className="text-gray-300">{item}</span>
+                </div>
+              ))}
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="text-center">
-              <div className="text-5xl mb-4">💡</div>
-              <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Innovation</h3>
-              <p className="text-gray-300 text-sm">
-                We embrace new ideas and solutions
-              </p>
+      <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-playfair font-bold text-center mb-12">
+            Join Our <span className="text-[#D4AF37]">Workforce</span>
+          </h2>
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-xl text-gray-300 mb-8">
+              T21 Services is always looking for experienced healthcare operational professionals to join our workforce
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 mb-10">
+              <div className="glass-card text-center">
+                <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Healthcare Experience</h3>
+                <p className="text-gray-300 text-sm">Work across diverse NHS trusts and healthcare organisations</p>
+              </div>
+              <div className="glass-card text-center">
+                <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Professional Development</h3>
+                <p className="text-gray-300 text-sm">Access to TQUK-approved training and development programmes</p>
+              </div>
+              <div className="glass-card text-center">
+                <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Flexible Working</h3>
+                <p className="text-gray-300 text-sm">Remote and on-site opportunities across healthcare operations</p>
+              </div>
             </div>
-
-            <div className="text-center">
-              <div className="text-5xl mb-4">🤝</div>
-              <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Collaboration</h3>
-              <p className="text-gray-300 text-sm">
-                We work together to achieve more
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="text-5xl mb-4">🎯</div>
-              <h3 className="text-lg font-bold text-[#D4AF37] mb-2">Impact</h3>
-              <p className="text-gray-300 text-sm">
-                We make a real difference
-              </p>
-            </div>
+            <Link href="/careers" className="inline-block bg-[#D4AF37] text-black px-8 py-4 rounded-lg font-semibold hover:bg-[#FFD700] transition-all text-lg">
+              View Opportunities
+            </Link>
           </div>
         </div>
       </section>

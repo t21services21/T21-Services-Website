@@ -13,7 +13,7 @@ export default function PrivacyPage() {
           <h1 className="text-5xl font-bold mb-6">
             Privacy <span className="text-[#D4AF37]">Policy</span>
           </h1>
-          <p className="text-gray-400 mb-12">Last Updated: November 1, 2025</p>
+          <p className="text-gray-400 mb-12">Last Updated: March 1, 2026</p>
 
           <div className="space-y-8 text-gray-300">
             <section>
@@ -50,11 +50,11 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-bold text-[#D4AF37] mb-4">3. How We Use Your Information</h2>
               <p className="mb-4">We use the information we collect to:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Process course enrollments and provide training services</li>
+                <li>Process operational service enquiries and workforce deployment</li>
                 <li>Communicate with you about courses, services, and updates</li>
-                <li>Process job applications and recruitment services</li>
+                <li>Process workforce registration and deployment coordination</li>
                 <li>Improve our website and services</li>
-                <li>Comply with legal obligations and TQUK requirements</li>
+                <li>Comply with legal obligations and healthcare regulatory requirements</li>
                 <li>Send marketing communications (with your consent)</li>
                 <li>Analyze usage patterns and optimize user experience</li>
               </ul>
